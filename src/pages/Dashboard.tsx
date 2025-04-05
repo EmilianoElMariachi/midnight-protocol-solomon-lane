@@ -13,7 +13,7 @@ const Dashboard = () => {
   };
 
   return (
-    <div className="min-h-screen bg-[#1A1F2C] overflow-x-hidden">
+    <div className="min-h-screen bg-[#1A1F2C] overflow-hidden">
       <Sidebar isOpen={sidebarOpen} toggleSidebar={toggleSidebar} />
       
       <div className={`min-h-screen transition-all duration-200 overflow-hidden ${sidebarOpen ? "ml-64" : "ml-0"}`}>

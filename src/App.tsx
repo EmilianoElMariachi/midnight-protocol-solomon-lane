@@ -28,7 +28,7 @@ const ProtectedRoute = ({ children }: { children: React.ReactNode }) => {
 
 const AppContent = () => {
   return (
-    <div className="flex flex-col min-h-screen bg-[#1A1F2C] overflow-x-hidden">
+    <div className="flex flex-col min-h-screen bg-[#1A1F2C] overflow-hidden">
       <CountdownTimer />
       
       <Routes>
