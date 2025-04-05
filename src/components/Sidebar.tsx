@@ -1,5 +1,4 @@
 
-import React from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Shield, File, User, Settings, Menu, Clock, Bomb } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -14,11 +13,11 @@ const Sidebar = ({ isOpen, toggleSidebar }: SidebarProps) => {
   const location = useLocation();
   
   const menuItems = [
-    { name: "Intelligence Reports", icon: <File className="mr-2 h-4 w-4" />, path: "/dashboard/reports" },
-    { name: "Personnel Database", icon: <User className="mr-2 h-4 w-4" />, path: "/dashboard/personnel" },
-    { name: "Security Protocols", icon: <Shield className="mr-2 h-4 w-4" />, path: "/dashboard/security" },
-    { name: "Threat Assessments", icon: <Clock className="mr-2 h-4 w-4" />, path: "/dashboard/threats" },
-    { name: "Bomb Controls", icon: <Bomb className="mr-2 h-4 w-4" />, path: "/dashboard/bomb-control" },
+    { name: "Rapports d'intelligence", icon: <File className="mr-2 h-4 w-4" />, path: "/dashboard/reports" },
+    { name: "Personnel", icon: <User className="mr-2 h-4 w-4" />, path: "/dashboard/personnel" },
+    { name: "Protocoles de sécurité", icon: <Shield className="mr-2 h-4 w-4" />, path: "/dashboard/security" },
+    { name: "Contrôle des menaces", icon: <Clock className="mr-2 h-4 w-4" />, path: "/dashboard/threats" },
+    { name: "Gestion de la bombe", icon: <Bomb className="mr-2 h-4 w-4" />, path: "/dashboard/bomb-control" },
   ];
 
   return (
@@ -28,7 +27,7 @@ const Sidebar = ({ isOpen, toggleSidebar }: SidebarProps) => {
           variant="outline"
           size="icon"
           onClick={toggleSidebar}
-          className="bg-secondary text-foreground"
+          className="bg-secondary text-foreground menu-btn"
         >
           <Menu className="h-4 w-4" />
         </Button>
@@ -44,7 +43,7 @@ const Sidebar = ({ isOpen, toggleSidebar }: SidebarProps) => {
           <div className="flex items-center justify-between gap-2">
             <div className="flex items-center gap-2">
               <Shield className="h-5 w-5 text-red-500" />
-              <h2 className="font-semibold text-xl">MIDPROT</h2>
+              <h2 className="font-semibold text-xl">SIGMA-9</h2>
             </div>
             <Button
               variant="ghost"
@@ -56,7 +55,7 @@ const Sidebar = ({ isOpen, toggleSidebar }: SidebarProps) => {
             </Button>
           </div>
           
-          <p className="text-xs text-gray-400 mt-1">Midnight Protocol Security System</p>
+          <p className="text-xs text-gray-400 mt-1">SIGMA-9 Security System</p>
           <div className="text-xs bg-red-800/30 text-red-400 px-2 py-1 rounded mt-2 border border-red-800">
             CLEARANCE LEVEL: ALPHA
           </div>

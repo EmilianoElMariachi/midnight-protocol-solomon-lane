@@ -62,8 +62,8 @@ const Login = () => {
           </div>
           
           <div className="mb-8 text-center">
-            <h1 className="text-3xl font-bold mb-2">MIDPROT</h1>
-            <p className="text-sm text-gray-400">Midnight Protocol Security System</p>
+            <h1 className="text-3xl font-bold mb-2">SIGMA-9</h1>
+            <p className="text-sm text-gray-400">SIGMA-9 Security System</p>
             
             <div className="mt-4 text-xs bg-red-900/20 text-red-400 border border-red-800/50 p-2 rounded">
               AVERTISSEMENT: Système gouvernemental restreint. Accès non autorisé punissable selon la loi.

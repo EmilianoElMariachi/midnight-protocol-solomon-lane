@@ -11,7 +11,7 @@ const DashboardHome = () => {
           <p className="text-red-400 uppercase font-semibold">Notification de sécurité</p>
         </div>
         <p className="mt-2 text-gray-300">
-          Bienvenue dans le système de contrôle MIDPROT. Ce système contient des informations classifiées 
+          Bienvenue dans le système de contrôle SIGMA-9. Ce système contient des informations classifiées 
           de la plus haute importance. Toutes vos actions sont enregistrées et surveillées.
         </p>
       </div>
