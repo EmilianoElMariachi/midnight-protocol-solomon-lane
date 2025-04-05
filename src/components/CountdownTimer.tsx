@@ -1,6 +1,7 @@
 
 import React, { useState, useEffect } from "react";
 import { useTimerStore } from "@/stores/timerStore";
+import { Atom, Radiation } from "lucide-react";
 
 const CountdownTimer = () => {
   const { timeRemaining, isRunning, setTimeRemaining } = useTimerStore();
@@ -59,15 +60,21 @@ const CountdownTimer = () => {
   };
 
   return (
-    <div className="w-full bg-black/80 py-4 border-y border-gray-700">
-      <div className={`text-6xl md:text-7xl lg:text-8xl text-center lcd-display ${isRunning ? 'text-red-500' : 'text-green-500'}`}>
-        <span>{formatTime(displayTime.hours)}</span>
-        <span className="animate-blink">:</span>
-        <span>{formatTime(displayTime.minutes)}</span>
-        <span className="animate-blink">:</span>
-        <span>{formatTime(displayTime.seconds)}</span>
-        <span className="animate-blink">.</span>
-        <span>{formatTime(displayTime.centiseconds)}</span>
+    <div className="w-full bg-black/80 py-4 border-y border-gray-700 relative">
+      <div className="flex items-center justify-center">
+        <Radiation className={`w-10 h-10 md:w-12 md:h-12 lg:w-16 lg:h-16 mr-4 ${isRunning ? 'text-red-500 animate-pulse' : 'text-green-500'}`} strokeWidth={1.5} />
+        
+        <div className={`text-6xl md:text-7xl lg:text-8xl text-center lcd-display ${isRunning ? 'text-red-500' : 'text-green-500'}`}>
+          <span>{formatTime(displayTime.hours)}</span>
+          <span className="animate-blink">:</span>
+          <span>{formatTime(displayTime.minutes)}</span>
+          <span className="animate-blink">:</span>
+          <span>{formatTime(displayTime.seconds)}</span>
+          <span className="animate-blink">.</span>
+          <span>{formatTime(displayTime.centiseconds)}</span>
+        </div>
+        
+        <Atom className={`w-10 h-10 md:w-12 md:h-12 lg:w-16 lg:h-16 ml-4 ${isRunning ? 'text-red-500 animate-pulse' : 'text-green-500'}`} strokeWidth={1.5} />
       </div>
     </div>
   );

@@ -38,13 +38,14 @@
   }
 }
 
+/* Seven-segment display style for digits */
 .digit-container {
   font-family: 'Digital-7', monospace;
   font-variant-numeric: tabular-nums;
 }
 
 .lcd-display {
-  font-family: monospace;
+  font-family: 'Courier New', Courier, monospace;
   font-weight: bold;
   letter-spacing: 2px;
   text-shadow: 0 0 10px currentColor;
@@ -52,10 +53,22 @@
   filter: drop-shadow(0 0 5px currentColor);
 }
 
-/* Seven-segment display feel */
+/* Enhanced seven-segment display feel */
 .lcd-display span {
   position: relative;
-  font-family: 'Courier New', Courier, monospace;
+  font-family: 'DSEG7 Classic', 'Courier New', Courier, monospace;
+  font-style: italic;
+  font-weight: 400;
+  letter-spacing: 0;
+  filter: drop-shadow(0 0 2px currentColor);
+}
+
+@font-face {
+  font-family: 'DSEG7 Classic';
+  src: url('https://cdn.jsdelivr.net/npm/dseg@0.46.0/fonts/DSEG7-Classic/DSEG7Classic-Italic.woff2') format('woff2');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
 }
 
 @keyframes typing {
@@ -76,4 +89,20 @@
 
 .animate-blink {
   animation: blink 1s infinite;
+}
+
+/* Pulsing animation for radiation symbols */
+@keyframes pulse-glow {
+  0%, 100% { 
+    filter: drop-shadow(0 0 2px currentColor);
+    opacity: 0.9;
+  }
+  50% { 
+    filter: drop-shadow(0 0 10px currentColor);
+    opacity: 1;
+  }
+}
+
+.animate-pulse {
+  animation: pulse-glow 2s infinite;
 }
