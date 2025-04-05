@@ -60,7 +60,7 @@ const CountdownTimer = () => {
   };
 
   return (
-    <div className="w-full bg-black/80 py-4 border-y border-gray-700 relative">
+    <div className="w-full bg-black/80 py-4 border-y border-gray-700 relative overflow-hidden">
       <div className="flex items-center justify-center">
         <Radiation className={`w-10 h-10 md:w-12 md:h-12 lg:w-16 lg:h-16 mr-4 ${isRunning ? 'text-red-500 animate-pulse' : 'text-green-500'}`} strokeWidth={1.5} />
         
