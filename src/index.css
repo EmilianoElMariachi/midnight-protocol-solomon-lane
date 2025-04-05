@@ -54,7 +54,6 @@
   letter-spacing: 2px;
   text-shadow: 0 0 10px currentColor;
   font-variant-numeric: tabular-nums;
-  filter: drop-shadow(0 0 5px currentColor);
 }
 
 /* Enhanced seven-segment display feel */
@@ -64,7 +63,6 @@
   font-style: italic;
   font-weight: 400;
   letter-spacing: 0;
-  filter: drop-shadow(0 0 2px currentColor);
 }
 
 @font-face {
