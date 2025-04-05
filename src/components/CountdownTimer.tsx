@@ -60,7 +60,7 @@ const CountdownTimer = () => {
 
   return (
     <div className="w-full bg-black/80 py-4 border-y border-gray-700">
-      <div className={`lcd-display text-6xl md:text-7xl lg:text-8xl text-center font-mono tracking-wider digit-container ${isRunning ? 'text-timer-DEFAULT' : 'text-timer-stopped'}`}>
+      <div className={`text-6xl md:text-7xl lg:text-8xl text-center lcd-display ${isRunning ? 'text-red-500' : 'text-green-500'}`}>
         <span>{formatTime(displayTime.hours)}</span>
         <span className="animate-blink">:</span>
         <span>{formatTime(displayTime.minutes)}</span>

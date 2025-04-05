@@ -45,8 +45,17 @@
 
 .lcd-display {
   font-family: monospace;
+  font-weight: bold;
   letter-spacing: 2px;
   text-shadow: 0 0 10px currentColor;
+  font-variant-numeric: tabular-nums;
+  filter: drop-shadow(0 0 5px currentColor);
+}
+
+/* Seven-segment display feel */
+.lcd-display span {
+  position: relative;
+  font-family: 'Courier New', Courier, monospace;
 }
 
 @keyframes typing {
@@ -58,4 +67,13 @@
   overflow: hidden;
   white-space: nowrap;
   animation: typing 1.5s steps(40, end);
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}
+
+.animate-blink {
+  animation: blink 1s infinite;
 }
