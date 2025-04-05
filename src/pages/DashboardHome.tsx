@@ -1,7 +1,6 @@
-
 import React from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Bomb, User, Shield, Server } from "lucide-react";
+import { Bomb, User, Shield, Server, File } from "lucide-react";
 
 const DashboardHome = () => {
   return (

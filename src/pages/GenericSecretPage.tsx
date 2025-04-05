@@ -2,7 +2,7 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Eye, Lock, File, AlertTriangle } from "lucide-react";
+import { Eye, Lock, File, AlertTriangle, User, Shield } from "lucide-react";
 
 const PAGES = {
   reports: {
