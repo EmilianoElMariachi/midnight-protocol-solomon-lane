@@ -19,7 +19,8 @@ const BombControl = () => {
     setIsVerifying(true);
 
     setTimeout(() => {
-      const correct = code === "01102016";
+      
+      const correct = code.trim().toLowerCase() === "clmnrrrstw";
       
       if (correct) {
         setIsCodeCorrect(true);
@@ -82,12 +83,12 @@ const BombControl = () => {
                 <div>
                   <label className="text-sm font-medium flex items-center mb-2">
                     <Lock className="h-4 w-4 mr-2" />
-                    Code d'autorisation (8 chiffres)
+                    Code d'autorisation
                   </label>
                   <Input
                     type="password"
                     placeholder="Entrez le code d'autorisation"
-                    maxLength={8}
+                    maxLength={10}
                     value={code}
                     onChange={(e) => setCode(e.target.value)}
                     className="bg-gray-900 border-gray-800 font-mono"
@@ -101,7 +102,6 @@ const BombControl = () => {
                 <Button
                   type="submit"
                   className="w-full bg-red-700 hover:bg-red-600"
-                  disabled={isVerifying || code.length !== 8}
                 >
                   {isVerifying ? "Vérification..." : "Valider le code"}
                 </Button>
